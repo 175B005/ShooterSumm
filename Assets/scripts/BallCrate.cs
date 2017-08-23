@@ -32,7 +32,7 @@ public class BallCrate : MonoBehaviour {
 		Quaternion qua = new Quaternion ();
 		qua = Quaternion.identity;
 		
-		if (countball < 3) {
+		if (countball < 11) {
 			switch(high){
 			case 11:
 				Instantiate (blockPrefab, pos, qua);	
@@ -50,6 +50,6 @@ public class BallCrate : MonoBehaviour {
 				Debug.Log(countball);
 				break;
 			}
-		}
+}
 	}
 }

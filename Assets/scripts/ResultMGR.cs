@@ -8,6 +8,8 @@ public class ResultMGR : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown ("Fire1")) {
 			SceneManager.LoadSceneAsync ("Start");
-		}
+		}	
+		GameParams.MaxScoreC ();
+		GameParams.DrawScore ();
 	}
 }

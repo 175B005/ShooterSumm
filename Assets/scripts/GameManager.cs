@@ -16,7 +16,9 @@ public class GameManager : MonoBehaviour {
 
 		//Oキー
 		if (Input.GetKeyDown (KeyCode.O)) {
+			Time.timeScale = 0;
 			NextScene = "TimeUp";
+
 		}
 
 		//シーンの切り替え処理
