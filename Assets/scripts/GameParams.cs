@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//-スコアを記録、表示するスクリプト-
 public class GameParams : MonoBehaviour
 {
     // 自分のインスタンス
@@ -19,6 +20,7 @@ public class GameParams : MonoBehaviour
 	//マネージャーから、スコアの追加に使用する。
     public static void AddScore(int add) 
     {
+		
         _score += add;
         if (_score > 999999)
         {
@@ -26,14 +28,22 @@ public class GameParams : MonoBehaviour
         }
         DrawScore();
     }
+	public static void DeScore(int De)
+	{
+			_score -= De;
+			if (_score < 0) {
+				_score = 0;
+			}
+			DrawScore ();
+	}
 	//最大スコアを記録しておく。
 	public static void MaxScoreC(){
 		_Resultscore = _score;
-		_Resultscore = 9000;
-			if (_Maxscore > _Resultscore) {
+		//確認用_Resultscore = 9000;
+			if (_Maxscore < _Resultscore) {
 			_Maxscore = _Resultscore;
 			}
-		_Maxscore = 10000;
+		//確認用_Maxscore = 10000;
 	}
 
 	//一番初めに実行、thisを入れておく。

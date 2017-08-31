@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//-startシーンに戻る-
 public class ResultMGR : MonoBehaviour {
 
 	void Update () {
@@ -11,5 +12,7 @@ public class ResultMGR : MonoBehaviour {
 		}	
 		GameParams.MaxScoreC ();
 		GameParams.DrawScore ();
+	
+
 	}
 }

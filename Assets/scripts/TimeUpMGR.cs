@@ -3,16 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//-TimeUp表示後リザルトに切り替え-
 public class TimeUpMGR : MonoBehaviour {
-	// Update is called once per frame
+	private int tim = 0;
+
 	void Update () {
-		if (Input.GetButtonDown ("Fire1")) {
-			GameManager.NextScene = "Result";
-			if (GameManager.NextScene.Length > 0){
-				SceneManager.LoadSceneAsync (GameManager.NextScene,LoadSceneMode.Additive);
-				GameManager.NextScene = "";
+
+		tim += 1;
+		if(tim >= 100){
+		//if (Input.GetButtonDown ("Fire1")) {
+		//	GameManager.NextScene = "Result";
+			SceneManager.LoadScene ("Result");
+		//		GameManager.NextScene = "";
 				enabled = false;
-			}
+		//	}
+		}
 		}
 	}
-}
+
