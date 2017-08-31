@@ -21,16 +21,17 @@ public class Timecount : MonoBehaviour {
 			//Debug.Log (c);
 
 			if (c <= 0) {
-				GameManager.PlaySE(3);
+			//	GameManager.PlaySE(3);
+
 				SceneManager.LoadScene ("TimeUp");
 			}
 		}
 	}
 	void Awake(){
-		//インスタンスいthisを与える
+
 		instance = this;
 		//初期化設定
-		//、、、しないとc=６０が残って、すぐ終了するｗ
+		//、、、しないとc=０が残って、すぐ終了するｗ
 		Tim = 0;
 		c = 60;
 	}

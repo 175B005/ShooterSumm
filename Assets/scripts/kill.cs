@@ -30,7 +30,7 @@ public class kill : MonoBehaviour {
 					&& spos.x < ar1){
 					*/
 			//効果音
-			GameManager.PlaySE(2);
+			GameManager.PlaySE(4);
 
 			if (CompareTag ("mato")) {
 				GameParams.AddScore (1000);

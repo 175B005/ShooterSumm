@@ -7,6 +7,9 @@ using UnityEngine.SceneManagement;
 public class TimeUpMGR : MonoBehaviour {
 	private int tim = 0;
 
+	/*void Start(){
+		GameManager.PlaySE (3);
+	}*/
 	void Update () {
 
 		tim += 1;

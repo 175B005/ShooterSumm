@@ -20,9 +20,10 @@ public class GameManager : MonoBehaviour {
 	}
 
 	void Start () {
+
 		SE = gameObject.GetComponents<AudioSource> ();
         GameParams.SetScore(0);
-		PlaySE (5);
+		//PlaySE (5);　Play On AwakeでやっているからOK。
 	}
 	void Update () {
 	/*	//Oキー
@@ -36,6 +37,7 @@ public class GameManager : MonoBehaviour {
 		*/
 		//シーンの切り替え処理
 		if (NextScene.Length > 0){
+		//	SE[5].Stop();
 		SceneManager.LoadSceneAsync (NextScene, LoadSceneMode.Additive);
 			NextScene = "";
 			enabled = false;

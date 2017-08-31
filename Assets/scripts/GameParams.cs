@@ -35,6 +35,7 @@ public class GameParams : MonoBehaviour
 				_score = 0;
 			}
 			DrawScore ();
+		//Debug.Log (_score);
 	}
 	//最大スコアを記録しておく。
 	public static void MaxScoreC(){
@@ -44,6 +45,8 @@ public class GameParams : MonoBehaviour
 			_Maxscore = _Resultscore;
 			}
 		//確認用_Maxscore = 10000;
+
+		//Debug.Log (_score);
 	}
 
 	//一番初めに実行、thisを入れておく。
@@ -61,7 +64,7 @@ public class GameParams : MonoBehaviour
     public static void DrawScore()
 	{
 		if (_instance.scoreText != null) {
-			_instance.scoreText.text = "" + _score.ToString ("D6");
+			_instance.scoreText.text = "Score " + _score.ToString ("D6");
 		}
 			if (_instance.RscoreText != null) {
 				_instance.RscoreText.text = "" + _Resultscore.ToString ("D6");
