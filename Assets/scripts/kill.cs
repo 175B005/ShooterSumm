@@ -64,4 +64,3 @@ public class kill : MonoBehaviour {
 	 * 後で大きさなどかえるつもりだったｗ
 	 * （変えてないｗ）
 	*/
-
