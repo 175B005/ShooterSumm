@@ -34,14 +34,17 @@ public class kill : MonoBehaviour {
 
 			if (CompareTag ("mato")) {
 				GameParams.AddScore (1000);
+				//scoretext.TextCreate (1000);
 				Destroy (gameObject);
 			}
 			if (CompareTag ("mato1")) {
 				GameParams.AddScore (600);
+				//scoretext.TextCreate (600);
 				Destroy (gameObject);
 			}
 			if (CompareTag ("mato2")) {
 				GameParams.AddScore (350);
+			//	scoretext.TextCreate (350);
 				Destroy (gameObject);
 			}	
 
