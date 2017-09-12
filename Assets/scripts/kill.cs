@@ -6,6 +6,7 @@ using UnityEngine;
 public class kill : MonoBehaviour {
 
 	public float ar, ar1;
+
 	void OnMouseEnter(){
 		//Debug.Log ("10");
 		//if (Input.GetMouseButtonDown(0)) {
@@ -13,7 +14,8 @@ public class kill : MonoBehaviour {
 			//Vector3 mpos = Input.mousePosition;
 		if(Input.GetButtonDown("Fire1")){
 			BallCrate.countball -= 1;
-			/*if(0.4f < mpos.y 
+			/*いらない↓
+			 * if(0.4f < mpos.y 
 				&& mpos.y < 0.8f
 				&& 0.92f < mpos.y
 				&& mpos.y < 1.32f
@@ -34,17 +36,17 @@ public class kill : MonoBehaviour {
 
 			if (CompareTag ("mato")) {
 				GameParams.AddScore (1000);
-				//scoretext.TextCreate (1000);
+				scoretext.TextCreate (1000);
 				Destroy (gameObject);
 			}
 			if (CompareTag ("mato1")) {
 				GameParams.AddScore (600);
-				//scoretext.TextCreate (600);
+				scoretext.TextCreate (600);
 				Destroy (gameObject);
 			}
 			if (CompareTag ("mato2")) {
 				GameParams.AddScore (350);
-			//	scoretext.TextCreate (350);
+				scoretext.TextCreate (350);
 				Destroy (gameObject);
 			}	
 

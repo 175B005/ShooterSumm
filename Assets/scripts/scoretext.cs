@@ -13,16 +13,17 @@ public class scoretext : MonoBehaviour {
 	}
 
 	public static void TextCreate(int n){
+
 		Quaternion qua = new Quaternion ();
 		qua = Quaternion.identity;
 
 		Vector3 mmpos = Input.mousePosition;
-		mmpos.y = mmpos.y + 30;
+		//mmpos.y = mmpos.y + 30;
 
 		if (instance.scorePt != null) {
+			Instantiate (instance.scorePt, mmpos, qua);      
 			instance.scorePt.text = "" + n.ToString ();
-			Instantiate (instance.scorePt, mmpos, qua);
-		}
+        }
 
 	}
 

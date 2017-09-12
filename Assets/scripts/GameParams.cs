@@ -57,8 +57,10 @@ public class GameParams : MonoBehaviour
 
     public static void SetScore(int sc)
     {
+
         _score = sc;
         DrawScore();
+
     }
 
     public static void DrawScore()
