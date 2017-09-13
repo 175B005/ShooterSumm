@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class move_scoretext : MonoBehaviour {
 
-
-	void Update () {
-        transform.position += new Vector3(0f, 0.05f, 0f);
+    void Update () {
+        transform.position += new Vector3(0f, 1f, 0f);
+  
     }
+    
 }

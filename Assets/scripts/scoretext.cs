@@ -3,28 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class scoretext : MonoBehaviour {
-	
-	public static scoretext instance;
-	public Text scorePt;
+public class scoretext : MonoBehaviour
+{
+    public static scoretext instance;
+    public GameObject scorePr;
+    public Transform canvasT;
 
-	void Awake(){
-		instance = this;
-	}
+    /*
+    public Text scorePt;
+    
+    public Canvas canvasP;
+    */
+    //親←canvasを入れておく
 
-	public static void TextCreate(int n){
+    private void Awake()
+    {
+        instance = this;
+    }
 
-		Quaternion qua = new Quaternion ();
-		qua = Quaternion.identity;
+    public static void TextCreate(int n)
+    {
 
-		Vector3 mmpos = Input.mousePosition;
-		//mmpos.y = mmpos.y + 30;
+        Quaternion qua = new Quaternion();
+        qua = Quaternion.identity;
 
-		if (instance.scorePt != null) {
-			Instantiate (instance.scorePt, mmpos, qua);      
-			instance.scorePt.text = "" + n.ToString ();
-        }
+        Vector3 mmpos = Input.mousePosition;
+        mmpos.y = mmpos.y - 10;
 
-	}
+    
+            GameObject prefab = 
+			Instantiate (instance.scorePr, mmpos, qua);
+        prefab.transform.SetParent(instance.canvasT);
 
+      
+          //  instance.scorePt.transform.SetParent(instance.canvasP.transform, false);
+			prefab.GetComponent<Text>().text = "" + n.ToString ();
+           // instance.scorePt.transform.SetParent(Transform.parent,false);
+        
+
+
+    }
 }
