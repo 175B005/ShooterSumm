@@ -7,30 +7,18 @@ public class kill : MonoBehaviour {
 
 	public float ar, ar1;
 
-	void OnMouseEnter(){
+    private void OnMouseEnter()
+    {
+        OnMouseOver();
+    }
+    void OnMouseOver(){
 		//Debug.Log ("10");
 		//if (Input.GetMouseButtonDown(0)) {
 	//		Debug.Log ("11");
 			//Vector3 mpos = Input.mousePosition;
 		if(Input.GetButtonDown("Fire1")){
 			BallCrate.countball -= 1;
-			/*いらない↓
-			 * if(0.4f < mpos.y 
-				&& mpos.y < 0.8f
-				&& 0.92f < mpos.y
-				&& mpos.y < 1.32f
-				&& 1.46f < mpos.y
-				&& mpos.y < 1.86f){
 
-				mpos = Input.mousePosition;
-				Vector3 spos = transform.position;
-
-				 ar = spos.x - 0.2f;
-				ar1 = spos.x + 0.2f;
-
-				if(ar < spos.x
-					&& spos.x < ar1){
-					*/
 			//効果音
 			GameManager.PlaySE(4);
 
@@ -56,10 +44,10 @@ public class kill : MonoBehaviour {
 			} else {
 				BallCrate.high = 11;
 			}
-			//Debug.Log (BallCrate.high);
+			
 			}
-			}
-		//}
+		
+		}
 	}
 	//<sumary>
 	/*mato=上ボール
